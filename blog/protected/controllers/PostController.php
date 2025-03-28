@@ -178,34 +178,36 @@ class PostController extends Controller
 	 */
 	public function actionAdmin()
 {
-    // Initialize the Post model for search functionality
     $model = new Post('search');
     $model->unsetAttributes();  // clear any default values
 
-    // If there is any search criteria provided via GET, apply it
     if (isset($_GET['Post'])) {
         $model->attributes = $_GET['Post'];
     }
 
+    $criteria = new CDbCriteria;
+
     // Only allow admin to filter by status
     if (Yii::app()->user->isAdmin()) {
-        // If status filter is provided via GET, apply it
         if (isset($_GET['status'])) {
-            $model->status = $_GET['status'];  
+            $criteria->addCondition('status = :status');
+            $criteria->params[':status'] = $_GET['status'];
         } else {
-            // Show all posts (drafts, published, and archived) for admin by default
-            $model->status = array(0, 1, 2);
+            // Show all statuses (draft, published, archived) for admin by default
+            $criteria->addInCondition('status', array(0, 1, 2));
         }
     } else {
         // Non-admin users can only see published posts
-        $model->status = 1;  
+        $criteria->addCondition('status = 1');
     }
 
-    // Render the admin view, passing the filtered model
+    $model->setDbCriteria($criteria);
+
     $this->render('admin', array(
         'model' => $model,
     ));
 }
+
 
 
 
