@@ -27,19 +27,24 @@ class PostController extends Controller
 	public function accessRules()
 {
     return array(
-        array('allow', // Allow admin to perform all post-related actions
-            'actions'=>array('admin', 'create', 'update', 'delete', 'publish', 'unpublish', 'archive'),
+        array('allow',  // Allow all users to perform 'index' and 'view' actions
+            'actions'=>array('index', 'view', 'tag'),
+            'users'=>array('*'),
+        ),
+        array('allow', // Allow authenticated users to perform create and update actions
+            'actions'=>array('create','update'),
             'users'=>array('admin'),
         ),
-        array('allow', // Allow all users to view posts and submit comments
-            'actions'=>array('index', 'view', 'comment'),
-            'users'=>array('*'), // Allow all users
+        array('allow', // Allow admin user to perform 'admin' and 'delete' actions
+            'actions'=>array('admin','delete'),
+            'users'=>array('admin'),
         ),
-        array('deny',  // Deny all users from other actions
+        array('deny',  // Deny all users by default
             'users'=>array('*'),
         ),
     );
 }
+
 
 
 
@@ -169,6 +174,7 @@ class PostController extends Controller
 
     $this->render('index', array(
         'dataProvider' => $dataProvider,
+		
     ));
 }
 
@@ -208,6 +214,13 @@ class PostController extends Controller
     ));
 }
 
+public static function getRecentComments($limit = 5)
+{
+    return Comment::model()->findAll(array(
+        'order' => 'create_time DESC',
+        'limit' => $limit,
+    ));
+}
 
 
 
@@ -268,5 +281,26 @@ public function actionArchive($id)
     }
     $this->redirect(array('admin'));
 }
+
+public function actionTag($tag)
+{
+    // Create a criteria to filter posts by the given tag
+    $criteria = new CDbCriteria;
+    $criteria->addSearchCondition('tags', $tag);
+
+    // Fetch posts that match the tag
+    $dataProvider = new CActiveDataProvider('Post', array(
+        'criteria' => $criteria,
+    ));
+
+    // Render the index view with filtered posts
+    $this->render('index', array(
+        'dataProvider' => $dataProvider,
+    ));
+}
+
+
+
+
 
 }

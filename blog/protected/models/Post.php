@@ -110,6 +110,43 @@ class Post extends CActiveRecord
 }
 
 
+public function searchByTag($tag)
+{
+    $criteria = new CDbCriteria();
+    $criteria->addSearchCondition('tags', $tag); // Assuming tags are stored as a comma-separated string
+    $criteria->addCondition('status = 1'); // Only fetch published posts
+
+    return new CActiveDataProvider('Post', array(
+        'criteria' => $criteria,
+        'pagination' => array(
+            'pageSize' => 10, // Optional: number of posts per page
+        ),
+    ));
+}
+
+
+public static function getTagCloud()
+{
+    $tags = array(); // Initialize an array to store tag counts
+    $posts = Post::model()->findAll(array('select'=>'tags')); // Fetch all posts with their tags
+
+    foreach ($posts as $post) {
+        $postTags = explode(',', $post->tags); // Split the tags by comma for each post
+        foreach ($postTags as $tag) {
+            $tag = trim($tag); // Remove extra spaces
+            if (!isset($tags[$tag])) {
+                $tags[$tag] = 1; // If tag is not in the array, add it with a count of 1
+            } else {
+                $tags[$tag]++; // If tag is already in the array, increment its count
+            }
+        }
+    }
+    
+    return $tags; // Return the array with tag counts
+}
+
+
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
