@@ -1,0 +1,299 @@
+2025/03/28 00:58:07 [error] [exception.CException] CException: Property "CWebUser.email" is not defined. in C:\xampp\htdocs\yiiblog2.0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CWebUser.php(146): CComponent->__get('email')
+#1 C:\xampp\htdocs\yiiblog2.0\blog\protected\controllers\PostController.php(63): CWebUser->__get('email')
+#2 [internal function]: PostController->actionView('2')
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#15 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=post/view&id=2
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:06:46 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('unpublish')
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('post/unpublish')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=post/unpublish&id=2
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/admin
+---
+2025/03/28 01:16:25 [error] [exception.CException] CException: Property "CWebUser.email" is not defined. in C:\xampp\htdocs\yiiblog2.0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CWebUser.php(146): CComponent->__get('email')
+#1 C:\xampp\htdocs\yiiblog2.0\blog\protected\controllers\PostController.php(65): CWebUser->__get('email')
+#2 [internal function]: PostController->actionView('2')
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#15 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=post/view&id=2
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:16:25 [error] [exception.CException] CException: Property "CWebUser.email" is not defined. in C:\xampp\htdocs\yiiblog2.0\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CWebUser.php(146): CComponent->__get('email')
+#1 C:\xampp\htdocs\yiiblog2.0\blog\protected\controllers\PostController.php(65): CWebUser->__get('email')
+#2 [internal function]: PostController->actionView('2')
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('view')
+#14 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#15 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=post/view&id=2
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:34:41 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=5
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:34:46 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('approve')
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/approve')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/approve&id=4
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:34:52 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=5
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:36:50 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=5
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:36:51 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=5
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:37:07 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=6
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:38:07 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=9
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:41:30 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=9
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:41:30 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=9
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:41:35 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=comment/delete&id=9
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/view&id=2
+---
+2025/03/28 01:44:06 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('create')
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('post/create')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=post/create
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/index
+---
+2025/03/28 01:44:17 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog2.0\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog2.0\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiblog2.0\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yiiblog2.0\framework\web\CWebApplication.php(141): CWebApplication->runController('post/admin')
+#9 C:\xampp\htdocs\yiiblog2.0\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yiiblog2.0\blog\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yiiblog2.0/blog/index.php?r=post/admin
+HTTP_REFERER=http://localhost/yiiblog2.0/blog/index.php?r=post/index
+---
